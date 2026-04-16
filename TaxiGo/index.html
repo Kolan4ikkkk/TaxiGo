@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>TaxiGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ГОЛОВНИЙ ЕКРАН -->
+<header class="hero">
+    <div class="overlay">
+        <h1>TaxiGo</h1>
+        <p>Швидко. Зручно. Надійно.</p>
+        <button>Замовити поїздку</button>
+    </div>
+</header>
+
+<!-- ПРО НАС -->
+<section class="about">
+    <h2>Про нас</h2>
+    <p>
+        TaxiGo — сучасна служба таксі, яка надає швидкі та комфортні перевезення.
+        Ми працюємо цілодобово та гарантуємо безпеку кожного клієнта.
+    </p>
+</section>
+
+<!-- ПОСЛУГИ -->
+<section class="services">
+    <h2>Наші послуги</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>🚖 По місту</h3>
+            <p>Швидкі поїздки у будь-яку точку міста</p>
+        </div>
+        <div class="card">
+            <h3>✈️ Аеропорт</h3>
+            <p>Комфортний трансфер без запізнень</p>
+        </div>
+        <div class="card">
+            <h3>📦 Доставка</h3>
+            <p>Оперативна доставка посилок</p>
+        </div>
+    </div>
+</section>
+
+<!-- ПЕРЕВАГИ -->
+<section class="advantages">
+    <h2>Чому обирають нас</h2>
+    <div class="cards">
+        <div class="card">⚡ Швидка подача авто</div>
+        <div class="card">👨‍✈️ Досвідчені водії</div>
+        <div class="card">💰 Доступні ціни</div>
+    </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer>
+    <p>📞 +380 00 000 00 00</p>
+    <p>© 2026 TaxiGo</p>
+</footer>
+
+<!-- JS Анімація при скролі -->
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    const triggerBottom = window.innerHeight * 0.8;
+
+    sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+
+        if (boxTop < triggerBottom) {
+            section.style.opacity = 1;
+            section.style.transform = "translateY(0)";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
