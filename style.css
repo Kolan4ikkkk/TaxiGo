@@ -1,16 +1,19 @@
 /* Стандартні кольори (Світла тема) */
 :root {
+    /* Світла тема */
     --bg-color: #ffffff;
     --text-color: #333333;
-    --accent-color: #ffcc00; /* Твій жовтий колір таксі */
     --card-bg: #f4f4f4;
+    --header-text: #1a1a1a;
 }
 
 /* Кольори для темної теми */
 [data-theme="dark"] {
+    /* Темна тема */
     --bg-color: #1a1a1a;
-    --text-color: #efefef;
-    --card-bg: #2d2d2d;
+    --text-color: #efefef; /* Світлий текст для темного фону */
+    --card-bg: #2d2d2d;    /* Темніші картки */
+    --header-text: #ffffff;
 }
 
 /* Тепер важливо: заміни фіксовані кольори у своєму коді на ці змінні */
@@ -136,11 +139,11 @@ section {
 
 /* блоки */
 .about {
-    background: #f5f5f5;
+    background: var(--bg-color);
 }
 
 .services {
-    background: white;
+    background: var(--bg-color);
 }
 
 .advantages {
@@ -157,7 +160,8 @@ section {
 }
 
 .card {
-    background: white;
+    background: var(--card-bg); /* Тепер фон буде змінюватися */
+    color: var(--text-color);    /* Текст автоматично стане світлим */
     padding: 20px;
     width: 250px;
     border-radius: 10px;
@@ -268,4 +272,9 @@ input:checked + .slider {
 
 input:checked + .slider:before {
     transform: translateX(24px);
+}
+.advantages h2, 
+.advantages p, 
+.advantages .card-title {
+    color: #1a1a1a !important;
 }
