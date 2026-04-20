@@ -126,3 +126,14 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+.tariff-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    padding: 20px;
+    background: white;
+}
+
+.tariff-card:hover {
+    transform: translateY(-10px); /* Картка підстрибує вгору */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* З'являється тінь */
+}
