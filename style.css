@@ -1,4 +1,71 @@
-/* СКИДАННЯ СТИЛІВ */
+/* Стандартні кольори (Світла тема) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #ffcc00; /* Твій жовтий колір таксі */
+    --card-bg: #f4f4f4;
+}
+
+/* Кольори для темної теми */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #efefef;
+    --card-bg: #2d2d2d;
+}
+
+/* Тепер важливо: заміни фіксовані кольори у своєму коді на ці змінні */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s; /* Щоб перемикання було плавним */
+}
+
+/* Стиль самої кнопки (можеш підправити під себе) */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.theme-switch input { display:none; }
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #ffcc00; }
+input:checked + .slider:before { transform: translateX(26px); }
 * {
     margin: 0;
     padding: 0;
