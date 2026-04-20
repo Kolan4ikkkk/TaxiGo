@@ -15,9 +15,11 @@
 
 /* Тепер важливо: заміни фіксовані кольори у своєму коді на ці змінні */
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: 0.3s; /* Щоб перемикання було плавним */
+    background-color: var(--bg-color); /* Бере колір зі змінної */
+    color: var(--text-color); /* Бере колір тексту зі змінної */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Плавна зміна кольору */
+    margin: 0;
+    font-family: sans-serif;
 }
 
 /* Стиль самої кнопки (можеш підправити під себе) */
@@ -203,4 +205,67 @@ html {
 .tariff-card:hover {
     transform: translateY(-10px); /* Картка підстрибує вгору */
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* З'являється тінь */
+}
+/* ЗМІННІ ДЛЯ ТЕМНОЇ ТЕМИ */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+}
+
+/* КРАСИВИЙ ПЕРЕМИКАЧ */
+.theme-switch-wrapper {
+    position: fixed; /* Закріплюємо кнопку на екрані */
+    top: 20px;
+    right: 20px; /* Вона буде в правому верхньому куті */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999; /* Щоб кнопка була поверх усіх картинок */
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ffcc00; /* Жовтий колір таксі при включенні */
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
 }
