@@ -426,3 +426,24 @@ input:checked + .slider:before {
 .submit-btn-driver:hover {
     background-color: #e6b800;
 }
+.form-container-card {
+    background-color: #ffffff !important; /* Завжди білий фон для картки */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Жирна тінь, щоб бачити межі */
+    color: #1a1a1a !important; /* Завжди чорний текст всередині */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    display: block !important; /* Щоб блок не зникав */
+}
+
+.driver-form input {
+    background-color: #f9f9f9 !important;
+    border: 2px solid #ffcc00 !important; /* Жовта рамка, щоб бачити поля */
+    color: #000 !important;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+}
