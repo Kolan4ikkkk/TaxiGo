@@ -2,57 +2,43 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Стати водієм — TaxiGo</title>
+    <title>Робота водієм — TaxiGo</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Запасний стиль, якщо основний CSS не спрацює */
-        .driver-form-section {
-            padding: 50px 20px;
-            background-color: #f9f9f9; /* Світло-сірий фон, щоб бачити форму */
-            min-height: 500px;
-            display: flex;
-            justify-content: center;
-        }
-        .form-container-card {
-            background: white !important;
-            color: #333 !important;
-            padding: 30px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 500px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-    </style>
 </head>
-<body>
-    <header class="hero mini-hero" style="height: 300px; background: #222; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
-        <div class="overlay">
-            <h1>Стань водієм TaxiGo</h1>
-            <a href="index.html" style="color: #ffcc00; text-decoration: none; font-weight: bold;">← Повернутися на головну</a>
-        </div>
+<body style="margin: 0; padding: 0; font-family: sans-serif; background: #f4f4f4;">
+
+    <header style="background: #1a1a1a; color: white; padding: 60px 20px; text-align: center;">
+        <h1 style="font-size: 40px; margin: 0;">Стань водієм TaxiGo</h1>
+        <p style="color: #ffe600;">Заробляй на власному авто у зручний час</p>
+        <a href="index.html" style="color: white; text-decoration: none; border: 1px solid #ffe600; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 20px;">← На головну</a>
     </header>
 
-    <section class="driver-form-section">
-        <div class="form-container-card">
-            <h2 style="margin-bottom: 20px; text-align: center;">Анкета реєстрації</h2>
+    <section style="padding: 40px 20px; display: flex; justify-content: center;">
+        <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 500px;">
+            <h2 style="color: #1a1a1a; text-align: center; margin-bottom: 25px;">Анкета реєстрації</h2>
+            
             <form>
                 <div style="margin-bottom: 15px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ваше ім'я</label>
-                    <input type="text" placeholder="Введіть ім'я" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+                    <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #333;">Ваше ім'я</label>
+                    <input type="text" placeholder="Іван Іванов" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;">
                 </div>
+
                 <div style="margin-bottom: 15px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Автомобіль</label>
-                    <input type="text" placeholder="Марка та модель" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+                    <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #333;">Ваш автомобіль</label>
+                    <input type="text" placeholder="VW Golf 4 / Hyundai" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;">
                 </div>
+
                 <div style="margin-bottom: 15px;">
-                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Телефон</label>
-                    <input type="tel" placeholder="+380..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
+                    <label style="display: block; font-weight: bold; margin-bottom: 5px; color: #333;">Номер телефону</label>
+                    <input type="tel" placeholder="+380..." style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box;">
                 </div>
-                <button type="submit" style="background: #ffcc00; color: #1a1a1a; border: none; width: 100%; padding: 15px; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 16px;">
+
+                <button type="submit" style="background: #ffe600; color: #1a1a1a; border: none; width: 100%; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 8px; cursor: pointer; transition: 0.3s;">
                     Відправити заявку
                 </button>
             </form>
         </div>
     </section>
+
 </body>
 </html>
