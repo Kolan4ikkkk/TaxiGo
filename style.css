@@ -447,3 +447,22 @@ input:checked + .slider:before {
     width: 100%;
     display: block;
 }
+/* ПРИМУСОВА ВИДИМІСТЬ */
+.form-container-card {
+    background: #ffffff !important; /* Тільки білий фон */
+    color: #000000 !important;    /* Тільки чорний текст */
+    border: 3px solid #ffcc00;     /* Яскрава жовта рамка */
+    display: block !important;     /* Заборонити зникати */
+    min-height: 300px;             /* Дати мінімальну висоту */
+}
+.driver-card {
+    background-color: white !important; /* Щоб не було "невидимки" */
+    color: black !important;           /* Текст має бути чорним */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: -50px auto 20px;           /* Піднімаємо форму на чорний фон */
+    position: relative;
+    z-index: 10;
+    max-width: 500px;
+}
