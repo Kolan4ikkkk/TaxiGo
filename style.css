@@ -466,3 +466,21 @@ input:checked + .slider:before {
     z-index: 10;
     max-width: 500px;
 }
+/* ПРИМУСОВА ВИДИМІСТЬ АНКЕТИ */
+.driver-card {
+    background: #ffffff !important; /* Білий фон картки */
+    color: #1a1a1a !important;      /* Чорний текст */
+    padding: 40px !important;
+    border-radius: 15px !important;
+    border: 3px solid #ffcc00 !important; /* Жовта рамка, щоб точно побачити */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+    margin: -100px auto 50px !important; /* Піднімаємо її на темну шапку */
+    max-width: 500px !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 999 !important;
+}
+
+.input-box label {
+    color: #1a1a1a !important; /* Чорний текст міток */
+}
