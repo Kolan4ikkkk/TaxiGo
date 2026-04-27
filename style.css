@@ -360,3 +360,69 @@ input:checked + .slider:before {
     font-weight: bold;
     margin-top: 20px;
 }
+/* --- СТИЛІ ДЛЯ СТОРІНКИ ВОДІЇВ --- */
+
+/* Секція форми */
+.driver-form-section {
+    padding: 60px 20px;
+    background-color: var(--bg-color); /* Бере білий колір зі змінної для денного режиму */
+    display: flex;
+    justify-content: center;
+}
+
+/* Контейнер-картка для форми (щоб виділялася) */
+.form-container-card {
+    background-color: var(--card-bg); /* Бере світло-сірий колір карток для денного режиму */
+    color: var(--text-color);         /* Чорний текст для денного режиму */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Легка тінь */
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Заголовок анкети */
+.form-container-card h2 {
+    text-align: center;
+    color: var(--header-text); /* Чорний текст */
+    margin-bottom: 30px;
+}
+
+/* Поля вводу */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Важливо для Flexbox */
+}
+
+/* Велика жовта кнопка */
+.submit-btn-driver {
+    background-color: #ffcc00; /* Жовтий TaxiGo */
+    color: #1a1a1a;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.submit-btn-driver:hover {
+    background-color: #e6b800;
+}
