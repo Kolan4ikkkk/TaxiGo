@@ -350,3 +350,13 @@ input:checked + .slider:before {
 .submit-btn:hover {
     background: #e6b800;
 }
+.btn-driver {
+    display: inline-block;
+    background: #ffcc00;
+    color: #1a1a1a;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+}
