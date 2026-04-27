@@ -278,3 +278,75 @@ input:checked + .slider:before {
 .advantages .card-title {
     color: #1a1a1a !important;
 }
+/* Стилі для сторінки водіїв */
+.mini-hero {
+    height: 40vh; /* Менша висота для другорядної сторінки */
+    min-height: 300px;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    background: white;
+    color: black;
+}
+
+.driver-form-section {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.driver-form {
+    background: var(--card-bg); /* Використовуємо твою зміну для фону карток */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: var(--bg-color); /* Поля вводу підлаштовуються під тему */
+    color: var(--text-color);
+}
+
+.submit-btn {
+    background: #ffcc00; /* Твій фірмовий колір */
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #e6b800;
+}

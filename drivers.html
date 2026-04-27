@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Робота водієм — TaxiGo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Темна тема</em>
+    </div>
+
+    <header class="hero mini-hero">
+        <div class="overlay">
+            <h1>Стань водієм TaxiGo</h1>
+            <p>Заробляй на власному авто у зручний час</p>
+            <a href="index.html" class="btn-back">← На головну</a>
+        </div>
+    </header>
+
+    <section class="driver-form-section">
+        <h2>Анкета для реєстрації</h2>
+        <form class="driver-form">
+            <div class="form-group">
+                <label>Ваше ім'я</label>
+                <input type="text" placeholder="Іван Іванов" required>
+            </div>
+            <div class="form-group">
+                <label>Ваш автомобіль</label>
+                <input type="text" placeholder="Марка та модель (напр. VW Golf 4)" required>
+            </div>
+            <div class="form-group">
+                <label>Тип авто</label>
+                <select>
+                    <option>Легковий (Седан/Хетчбек)</option>
+                    <option>Універсал (вантажоперевезення)</option>
+                    <option>Мінівен</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Номер телефону</label>
+                <input type="tel" placeholder="+380..." required>
+            </div>
+            <button type="submit" class="submit-btn">Відправити заявку</button>
+        </form>
+    </section>
+
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') { toggleSwitch.checked = true; }
+        }
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }    
+        }
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+</body>
+</html>
