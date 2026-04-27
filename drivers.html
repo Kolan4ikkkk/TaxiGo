@@ -2,64 +2,57 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Робота водієм — TaxiGo</title>
+    <title>Стати водієм — TaxiGo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Запасний стиль, якщо основний CSS не спрацює */
+        .driver-form-section {
+            padding: 50px 20px;
+            background-color: #f9f9f9; /* Світло-сірий фон, щоб бачити форму */
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container-card {
+            background: white !important;
+            color: #333 !important;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
-        <em>Темна тема</em>
-    </div>
-
-    <header class="hero mini-hero">
+    <header class="hero mini-hero" style="height: 300px; background: #222; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
         <div class="overlay">
             <h1>Стань водієм TaxiGo</h1>
-            <p>Заробляй на власному авто у зручний час</p>
-            <a href="index.html" class="btn-back">← На головну</a>
+            <a href="index.html" style="color: #ffcc00; text-decoration: none; font-weight: bold;">← Повернутися на головну</a>
         </div>
     </header>
 
     <section class="driver-form-section">
         <div class="form-container-card">
-            <h2>Анкета для реєстрації водія</h2>
-            <form class="driver-form">
-                <div class="form-group">
-                    <label>Ваше ім'я</label>
-                    <input type="text" placeholder="Іван Іванов" required>
+            <h2 style="margin-bottom: 20px; text-align: center;">Анкета реєстрації</h2>
+            <form>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ваше ім'я</label>
+                    <input type="text" placeholder="Введіть ім'я" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
                 </div>
-                <div class="form-group">
-                    <label>Марка та модель автомобіля</label>
-                    <input type="text" placeholder="Наприклад: VW Golf 4" required>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Автомобіль</label>
+                    <input type="text" placeholder="Марка та модель" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
                 </div>
-                <div class="form-group">
-                    <label>Номер телефону</label>
-                    <input type="tel" placeholder="+380..." required>
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Телефон</label>
+                    <input type="tel" placeholder="+380..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" required>
                 </div>
-                <button type="submit" class="submit-btn-driver">Відправити анкету</button>
+                <button type="submit" style="background: #ffcc00; color: #1a1a1a; border: none; width: 100%; padding: 15px; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 16px;">
+                    Відправити заявку
+                </button>
             </form>
         </div>
     </section>
-
-    <script>
-        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            document.documentElement.setAttribute('data-theme', currentTheme);
-            if (currentTheme === 'dark') { toggleSwitch.checked = true; }
-        }
-        function switchTheme(e) {
-            if (e.target.checked) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            }    
-        }
-        toggleSwitch.addEventListener('change', switchTheme, false);
-    </script>
 </body>
 </html>
