@@ -2,97 +2,82 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Робота водієм — TaxiGo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Стати водієм — TaxiGo</title>
     <style>
-        /* Стилі спеціально для цієї сторінки, щоб нічого не зникло */
-        body { margin: 0; font-family: sans-serif; background-color: #f4f4f4; color: #333; }
-        
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #ffffff !important; }
+        .hero { 
+            background: #1a1a1a; 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
         }
-
-        .form-section {
-            padding: 50px 20px;
-            display: flex;
-            justify-content: center;
-            margin-top: -50px; /* Наплив на шапку для стилю */
+        .form-section { 
+            display: flex; 
+            justify-content: center; 
+            padding: 40px 20px; 
+            background-color: #ffffff; 
         }
-
-        .driver-card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            width: 100%;
-            max-width: 500px;
+        /* ЦЯ КАРТКА БУДЕ ВИДИМОЮ ЗАВЖДИ */
+        .driver-card { 
+            background: #ffffff !important; 
+            color: #1a1a1a !important; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
+            width: 100%; 
+            max-width: 450px; 
+            border: 2px solid #ffcc00; 
         }
-
-        .input-box { margin-bottom: 20px; }
-        .input-box label { display: block; margin-bottom: 8px; font-weight: bold; color: #1a1a1a; }
+        .input-box { margin-bottom: 15px; text-align: left; }
+        .input-box label { display: block; font-weight: bold; margin-bottom: 5px; color: #1a1a1a !important; }
         .input-box input { 
             width: 100%; 
             padding: 12px; 
             border: 1px solid #ccc; 
             border-radius: 8px; 
             box-sizing: border-box; 
+            background: #fff !important;
+            color: #000 !important;
         }
-
-        .yellow-btn {
-            background: #ffe600;
-            color: #1a1a1a;
-            border: none;
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
+        .yellow-btn { 
+            background: #ffcc00; 
+            color: #1a1a1a; 
+            border: none; 
+            width: 100%; 
+            padding: 15px; 
+            font-weight: bold; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 16px;
         }
-
-        .yellow-btn:hover { background: #e6ce00; transform: translateY(-2px); }
-        .back-btn { color: white; text-decoration: none; margin-top: 20px; border-bottom: 1px dashed white; }
     </style>
 </head>
 <body>
-
-    <header class="hero-section">
-        <h1 style="font-size: 3rem; margin: 0;">Стань водієм TaxiGo</h1>
-        <p style="font-size: 1.2rem; margin: 10px 0;">Заробляй на власному авто у зручний час</p>
-        <a href="index.html" class="back-btn">← На головну</a>
+    <header class="hero">
+        <h1>Стань водієм TaxiGo</h1>
+        <p>Заробляй на власному авто</p>
+        <a href="index.html" style="color: #ffcc00; text-decoration: none;">← На головну</a>
     </header>
 
     <section class="form-section">
         <div class="driver-card">
-            <h2 style="text-align: center; margin-top: 0; color: #1a1a1a;">Анкета для реєстрації</h2>
+            <h2 style="text-align: center;">Анкета водія</h2>
             <form>
                 <div class="input-box">
                     <label>Ваше ім'я</label>
-                    <input type="text" placeholder="Наприклад: Олександр" required>
+                    <input type="text" placeholder="Олександр" required>
                 </div>
                 <div class="input-box">
-                    <label>Ваш автомобіль</label>
-                    <input type="text" placeholder="VW Golf 4, Hyundai і т.д." required>
+                    <label>Автомобіль</label>
+                    <input type="text" placeholder="Марка та модель" required>
                 </div>
                 <div class="input-box">
-                    <label>Номер телефону</label>
+                    <label>Телефон</label>
                     <input type="tel" placeholder="+380..." required>
                 </div>
-                <button type="submit" class="yellow-btn">Відправити заявку</button>
+                <button type="submit" class="yellow-btn">ВІДПРАВИТИ</button>
             </form>
         </div>
-    </section>
     </section>
 </body>
 </html>
