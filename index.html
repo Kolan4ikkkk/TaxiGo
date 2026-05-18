@@ -123,7 +123,7 @@ window.addEventListener("scroll", () => {
     toggleSwitch.addEventListener('change', switchTheme, false);
 </script>
 <script>
-    // 1. Центруємо мапу на Кам'янське (зум 13 — це оптимально для міста)
+    // 1. Ініціалізація мапи Кам'янського
     var map = L.map('map').setView([48.5097, 34.5981], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -131,22 +131,41 @@ window.addEventListener("scroll", () => {
     }).addTo(map);
 
     var taxiIcon = L.divIcon({
-        html: '<div style="font-size: 24px;">🚖</div>',
+        html: '<div style="font-size: 24px; transition: all 0.5s linear;">🚖</div>',
         className: 'dummy'
     });
 
-    // 2. Координати автівок для Кам'янського (Центр, Черемушки, Лівий берег)
-    var cars = [
-        { lat: 48.5150, lng: 34.6100, name: "Hyundai (Іван) - Центр" },
-        { lat: 48.5000, lng: 34.5900, name: "VW Golf (Олександр) - Черемушки" },
-        { lat: 48.5300, lng: 34.5600, name: "Porsche (Бізнес) - Лівий берег" }
+    // 2. Дані про автівки
+    var carData = [
+        { id: 1, lat: 48.5150, lng: 34.6100, name: "Hyundai (Іван)" },
+        { id: 2, lat: 48.5000, lng: 34.5900, name: "VW Golf (Олександр)" },
+        { id: 3, lat: 48.5300, lng: 34.5600, name: "Porsche (Бізнес)" }
     ];
 
-    cars.forEach(function(car) {
-        L.marker([car.lat, car.lng], {icon: taxiIcon})
+    var markers = {};
+
+    // 3. Створюємо маркери на мапі
+    carData.forEach(function(car) {
+        var marker = L.marker([car.lat, car.lng], {icon: taxiIcon})
             .addTo(map)
             .bindPopup(car.name);
+        markers[car.id] = marker; // Зберігаємо маркер в об'єкт для доступу за ID
     });
+
+    // 4. Функція для випадкового руху
+    function moveCars() {
+        carData.forEach(function(car) {
+            // Додаємо випадкове зміщення (приблизно 20-50 метрів)
+            car.lat += (Math.random() - 0.5) * 0.002;
+            car.lng += (Math.random() - 0.5) * 0.002;
+
+            // Оновлюємо позицію маркера на мапі
+            markers[car.id].setLatLng([car.lat, car.lng]);
+        });
+    }
+
+    // 5. Запускаємо рух кожні 5 секунд (5000 мілісекунд)
+    setInterval(moveCars, 5000);
 </script>
 </body>
 </html>
