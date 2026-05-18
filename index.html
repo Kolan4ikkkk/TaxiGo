@@ -62,6 +62,29 @@
     <h2 style="text-align: center; margin-bottom: 20px;">Наші авто на мапі</h2>
     <div id="map" style="height: 400px; width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"></div>
 </section>
+<section class="calc-section">
+    <div class="calc-card">
+        <h2>Розрахувати вартість поїздки</h2>
+        <div class="calc-inputs">
+            <div class="input-group">
+                <label>Відстань (км)</label>
+                <input type="number" id="distance" placeholder="Наприклад: 5" min="1">
+            </div>
+            <div class="input-group">
+                <label>Клас авто</label>
+                <select id="car-type">
+                    <option value="10">Економ (10 грн/км)</option>
+                    <option value="15">Стандарт (15 грн/км)</option>
+                    <option value="25">Бізнес (25 грн/км)</option>
+                </select>
+            </div>
+        </div>
+        <div class="result-box">
+            <span>Орієнтовна ціна:</span>
+            <div id="total-price">0 грн</div>
+        </div>
+    </div>
+</section>
 
 <!-- ПЕРЕВАГИ -->
 <section class="advantages">
@@ -169,3 +192,23 @@ window.addEventListener("scroll", () => {
 </script>
 </body>
 </html>
+<script>
+    const distanceInput = document.getElementById('distance');
+    const carTypeSelect = document.getElementById('car-type');
+    const totalPriceDisplay = document.getElementById('total-price');
+
+    function calculatePrice() {
+        const distance = parseFloat(distanceInput.value) || 0;
+        const rate = parseFloat(carTypeSelect.value);
+        
+        // Базова ціна за посадку (наприклад, 40 грн)
+        const basePrice = distance > 0 ? 40 : 0;
+        const total = basePrice + (distance * rate);
+        
+        totalPriceDisplay.innerText = Math.round(total) + ' грн';
+    }
+
+    // Слухаємо зміни в полях
+    distanceInput.addEventListener('input', calculatePrice);
+    carTypeSelect.addEventListener('change', calculatePrice);
+</script>
