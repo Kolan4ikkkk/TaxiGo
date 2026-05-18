@@ -68,35 +68,7 @@
         <div class="card">💰 Доступні ціни</div>
     </div>
 </section>
-<script>
-    // Ініціалізація мапи (координати центру твого міста, наприклад, Києва)
-    var map = L.map('map').setView([50.4501, 30.5234], 13);
 
-    // Додаємо шар мапи (OpenStreetMap)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Функція для створення іконки таксі (можеш використати емодзі або картинку)
-    var taxiIcon = L.divIcon({
-        html: '<div style="font-size: 24px;">🚖</div>',
-        className: 'dummy'
-    });
-
-    // Додаємо кілька "автівок" у випадкових місцях навколо центру
-    var cars = [
-        { lat: 50.452, lng: 30.520, name: "Hyundai Sonata (Економ: Іван)" },
-        { lat: 50.448, lng: 30.530, name: "VW Golf (Стандарт: Олександр)" },
-        { lat: 50.458, lng: 30.515, name: "Porsche Panamera (Дмитро: Бізнес)" }
-    ];
-
-    cars.forEach(function(car) {
-        L.marker([car.lat, car.lat], {icon: taxiIcon}) 
-        L.marker([car.lat, car.lng], {icon: taxiIcon})
-            .addTo(map)
-            .bindPopup(car.name);
-    });
-</script>
 <section class="map-section">
     <h2 style="text-align: center; margin-bottom: 20px;">Наші авто на мапі</h2>
     <div id="map" style="height: 400px; width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);"></div>
@@ -149,6 +121,35 @@ window.addEventListener("scroll", () => {
     }
 
     toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+<script>
+    // Ініціалізація мапи (координати центру твого міста, наприклад, Києва)
+    var map = L.map('map').setView([50.4501, 30.5234], 13);
+
+    // Додаємо шар мапи (OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Функція для створення іконки таксі (можеш використати емодзі або картинку)
+    var taxiIcon = L.divIcon({
+        html: '<div style="font-size: 24px;">🚖</div>',
+        className: 'dummy'
+    });
+
+    // Додаємо кілька "автівок" у випадкових місцях навколо центру
+    var cars = [
+        { lat: 50.452, lng: 30.520, name: "Hyundai (Іван)" },
+        { lat: 50.448, lng: 30.530, name: "VW Golf (Олександр)" },
+        { lat: 50.458, lng: 30.515, name: "Porsche (Бізнес)" }
+    ];
+
+    cars.forEach(function(car) {
+        L.marker([car.lat, car.lat], {icon: taxiIcon}) // Помилка була тут, виправлено нижче
+        L.marker([car.lat, car.lng], {icon: taxiIcon})
+            .addTo(map)
+            .bindPopup(car.name);
+    });
 </script>
 </body>
 </html>
