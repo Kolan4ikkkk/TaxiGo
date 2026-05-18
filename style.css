@@ -484,3 +484,12 @@ input:checked + .slider:before {
 .input-box label {
     color: #1a1a1a !important; /* Чорний текст міток */
 }
+.map-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#map {
+    z-index: 1; /* Щоб мапа не перекривала меню */
+}
