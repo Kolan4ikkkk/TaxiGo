@@ -1,31 +1,25 @@
-/* Стандартні кольори (Світла тема) */
 :root {
-    /* Світла тема */
     --bg-color: #ffffff;
     --text-color: #333333;
     --card-bg: #f4f4f4;
     --header-text: #1a1a1a;
 }
 
-/* Кольори для темної теми */
 [data-theme="dark"] {
-    /* Темна тема */
     --bg-color: #1a1a1a;
-    --text-color: #efefef; /* Світлий текст для темного фону */
-    --card-bg: #2d2d2d;    /* Темніші картки */
+    --text-color: #efefef; 
+    --card-bg: #2d2d2d;    
     --header-text: #ffffff;
 }
 
-/* Тепер важливо: заміни фіксовані кольори у своєму коді на ці змінні */
 body {
-    background-color: var(--bg-color); /* Бере колір зі змінної */
-    color: var(--text-color); /* Бере колір тексту зі змінної */
-    transition: background-color 0.4s ease, color 0.4s ease; /* Плавна зміна кольору */
+    background-color: var(--bg-color); 
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease; 
     margin: 0;
     font-family: sans-serif;
 }
 
-/* Стиль самої кнопки (можеш підправити під себе) */
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -77,19 +71,16 @@ input:checked + .slider:before { transform: translateX(26px); }
     box-sizing: border-box;
 }
 
-/* ОСНОВА */
 body {
     font-family: Arial, sans-serif;
 }
 
-/* HERO (ГОЛОВНИЙ ЕКРАН) */
 .hero {
     height: 100vh;
     background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
     position: relative;
 }
 
-/* затемнення */
 .overlay {
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
@@ -100,7 +91,6 @@ body {
     align-items: center;
 }
 
-/* текст */
 .overlay h1 {
     font-size: 70px;
     animation: fadeIn 1.5s ease-in-out;
@@ -128,7 +118,6 @@ body {
     transform: scale(1.1);
 }
 
-/* СЕКЦІЇ */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -137,7 +126,6 @@ section {
     transition: 0.8s;
 }
 
-/* блоки */
 .about {
     background: var(--bg-color);
 }
@@ -150,7 +138,6 @@ section {
     background: #ffe600;
 }
 
-/* КАРТКИ */
 .cards {
     display: flex;
     justify-content: center;
@@ -160,8 +147,8 @@ section {
 }
 
 .card {
-    background: var(--card-bg); /* Тепер фон буде змінюватися */
-    color: var(--text-color);    /* Текст автоматично стане світлим */
+    background: var(--card-bg); 
+    color: var(--text-color);    
     padding: 20px;
     width: 250px;
     border-radius: 10px;
@@ -169,13 +156,11 @@ section {
     transition: 0.3s;
 }
 
-/* ефект при наведенні */
 .card:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* ФУТЕР */
 footer {
     background: black;
     color: white;
@@ -183,7 +168,6 @@ footer {
     padding: 20px;
 }
 
-/* ПЛАВНА АНІМАЦІЯ */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -195,7 +179,6 @@ footer {
     }
 }
 
-/* ПЛАВНИЙ СКРОЛ */
 html {
     scroll-behavior: smooth;
 }
@@ -207,10 +190,10 @@ html {
 }
 
 .tariff-card:hover {
-    transform: translateY(-10px); /* Картка підстрибує вгору */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* З'являється тінь */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
 }
-/* ЗМІННІ ДЛЯ ТЕМНОЇ ТЕМИ */
+
 :root {
     --bg-color: #ffffff;
     --text-color: #333333;
@@ -221,15 +204,14 @@ html {
     --text-color: #f4f4f4;
 }
 
-/* КРАСИВИЙ ПЕРЕМИКАЧ */
 .theme-switch-wrapper {
-    position: fixed; /* Закріплюємо кнопку на екрані */
+    position: fixed; 
     top: 20px;
-    right: 20px; /* Вона буде в правому верхньому куті */
+    right: 20px; 
     display: flex;
     align-items: center;
     gap: 10px;
-    z-index: 9999; /* Щоб кнопка була поверх усіх картинок */
+    z-index: 9999; 
 }
 
 .theme-switch {
@@ -267,7 +249,7 @@ html {
 }
 
 input:checked + .slider {
-    background-color: #ffcc00; /* Жовтий колір таксі при включенні */
+    background-color: #ffcc00; 
 }
 
 input:checked + .slider:before {
@@ -278,9 +260,9 @@ input:checked + .slider:before {
 .advantages .card-title {
     color: #1a1a1a !important;
 }
-/* Стилі для сторінки водіїв */
+
 .mini-hero {
-    height: 40vh; /* Менша висота для другорядної сторінки */
+    height: 40vh; 
     min-height: 300px;
 }
 
@@ -308,7 +290,7 @@ input:checked + .slider:before {
 }
 
 .driver-form {
-    background: var(--card-bg); /* Використовуємо твою зміну для фону карток */
+    background: var(--card-bg); 
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -331,12 +313,12 @@ input:checked + .slider:before {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background: var(--bg-color); /* Поля вводу підлаштовуються під тему */
+    background: var(--bg-color); 
     color: var(--text-color);
 }
 
 .submit-btn {
-    background: #ffcc00; /* Твій фірмовий колір */
+    background: #ffcc00; 
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -360,20 +342,19 @@ input:checked + .slider:before {
     font-weight: bold;
     margin-top: 20px;
 }
-/* --- СТИЛІ ДЛЯ СТОРІНКИ ВОДІЇВ --- */
 
-/* Секція форми */
+
 .driver-form-section {
     padding: 60px 20px;
-    background-color: var(--bg-color); /* Бере білий колір зі змінної для денного режиму */
+    background-color: var(--bg-color); 
     display: flex;
     justify-content: center;
 }
 
-/* Контейнер-картка для форми (щоб виділялася) */
+
 .form-container-card {
-    background-color: var(--card-bg); /* Бере світло-сірий колір карток для денного режиму */
-    color: var(--text-color);         /* Чорний текст для денного режиму */
+    background-color: var(--card-bg); 
+    color: var(--text-color);         
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Легка тінь */
@@ -382,14 +363,13 @@ input:checked + .slider:before {
     text-align: left;
 }
 
-/* Заголовок анкети */
+
 .form-container-card h2 {
     text-align: center;
-    color: var(--header-text); /* Чорний текст */
+    color: var(--header-text); 
     margin-bottom: 30px;
 }
 
-/* Поля вводу */
 .form-group {
     margin-bottom: 20px;
 }
@@ -406,12 +386,11 @@ input:checked + .slider:before {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
-    box-sizing: border-box; /* Важливо для Flexbox */
+    box-sizing: border-box; 
 }
 
-/* Велика жовта кнопка */
 .submit-btn-driver {
-    background-color: #ffcc00; /* Жовтий TaxiGo */
+    background-color: #ffcc00; 
     color: #1a1a1a;
     border: none;
     padding: 15px 30px;
@@ -427,54 +406,54 @@ input:checked + .slider:before {
     background-color: #e6b800;
 }
 .form-container-card {
-    background-color: #ffffff !important; /* Завжди білий фон для картки */
+    background-color: #ffffff !important; 
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Жирна тінь, щоб бачити межі */
-    color: #1a1a1a !important; /* Завжди чорний текст всередині */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+    color: #1a1a1a !important; 
     margin: 20px auto;
     width: 90%;
     max-width: 500px;
-    display: block !important; /* Щоб блок не зникав */
+    display: block !important; 
 }
 
 .driver-form input {
     background-color: #f9f9f9 !important;
-    border: 2px solid #ffcc00 !important; /* Жовта рамка, щоб бачити поля */
+    border: 2px solid #ffcc00 !important; 
     color: #000 !important;
     padding: 12px;
     margin-bottom: 10px;
     width: 100%;
     display: block;
 }
-/* ПРИМУСОВА ВИДИМІСТЬ */
+
 .form-container-card {
-    background: #ffffff !important; /* Тільки білий фон */
-    color: #000000 !important;    /* Тільки чорний текст */
-    border: 3px solid #ffcc00;     /* Яскрава жовта рамка */
-    display: block !important;     /* Заборонити зникати */
-    min-height: 300px;             /* Дати мінімальну висоту */
+    background: #ffffff !important; 
+    color: #000000 !important;    
+    border: 3px solid #ffcc00;     
+    display: block !important;     
+    min-height: 300px;             
 }
 .driver-card {
-    background-color: white !important; /* Щоб не було "невидимки" */
-    color: black !important;           /* Текст має бути чорним */
+    background-color: white !important; 
+    color: black !important;           
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    margin: -50px auto 20px;           /* Піднімаємо форму на чорний фон */
+    margin: -50px auto 20px;           
     position: relative;
     z-index: 10;
     max-width: 500px;
 }
-/* ПРИМУСОВА ВИДИМІСТЬ АНКЕТИ */
+
 .driver-card {
-    background: #ffffff !important; /* Білий фон картки */
-    color: #1a1a1a !important;      /* Чорний текст */
+    background: #ffffff !important; 
+    color: #1a1a1a !important;      
     padding: 40px !important;
     border-radius: 15px !important;
-    border: 3px solid #ffcc00 !important; /* Жовта рамка, щоб точно побачити */
+    border: 3px solid #ffcc00 !important; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
-    margin: -100px auto 50px !important; /* Піднімаємо її на темну шапку */
+    margin: -100px auto 50px !important; 
     max-width: 500px !important;
     display: block !important;
     position: relative !important;
@@ -482,7 +461,7 @@ input:checked + .slider:before {
 }
 
 .input-box label {
-    color: #1a1a1a !important; /* Чорний текст міток */
+    color: #1a1a1a !important;
 }
 .map-section {
     padding: 50px 20px;
@@ -491,7 +470,7 @@ input:checked + .slider:before {
 }
 
 #map {
-    z-index: 1; /* Щоб мапа не перекривала меню */
+    z-index: 1; 
 }
 .calc-section {
     padding: 50px 20px;
@@ -555,7 +534,7 @@ input:checked + .slider:before {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #25d366; /* Колір WhatsApp або вибери жовтий #ffcc00 */
+    background-color: #25d366; 
     color: white;
     width: 60px;
     height: 60px;
